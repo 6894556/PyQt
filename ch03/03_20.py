@@ -27,3 +27,5 @@ app.exec_()
 #  Qc Designer로 제작한 UI를 사용하기 위해 필요한 두 가지
 #   1. uic.loadUiType("UI파일 경로")[0] : UI파일을 읽어서 파이썬 클래스로 만들어 주는 메서드 (from PyQt5 import uic 필요)
 #   2. setupUi() : Qt Designer에서 만든 클래스들을 초기화 해주는 메서드
+
+

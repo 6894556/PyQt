@@ -21,3 +21,4 @@ app.exec_()
 
 # Qt Designer로 생성한 widget의 이벤트 처리하기 위해서는
 # Qc Desinger의 객체 탐색기/object name을 확인해야 한다.
+

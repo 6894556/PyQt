@@ -29,3 +29,4 @@ app = QApplication([])
 window = MyWindow()
 window.show()
 app.exec_()
+

@@ -25,6 +25,8 @@ window = MyWindow()
 window.show()
 app.exec_()
 
+
+
 # QTimer
 
 # QTimer.start(interval)
