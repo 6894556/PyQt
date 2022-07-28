@@ -18,14 +18,18 @@
 - 03_19.py : 버튼에 클릭 이벤트 추가, QPushButton.clicked.connect(method)
 
 # PyQt Qt Designer(https://wikidocs.net/21875)
-- 03_20.py : QtDesigner(C:/Users/USER/anaconda3/Library/bin/designer.exe), uic.loadUiType, setupUi()
-- 03_21.py : qt designer로 추가한 버튼에 클릭 이벤트 메서드(btn_clicked) 연결
-- 03_22.py : qt designer로 추가한 버튼에 클릭 이벤트 메서드(inquiry) 연결
-- 03_23.py : qt designer로 추가한 버튼을 클릭 이벤트 메서드(inquiry : 비트코인 현재가를 콘솔에 출력) 연결
-- 03_24.py : qt designer로 추가한 버튼을 클릭 이벤트 메서드(inquiry : QLineEdit 위젯에 출력) 연결
-- 03_25.py : QTimer, QTimer.start(), QTimer.timeout.connect()
-- 03_26.py :
-- 03_27.py :
+- 03_20.py : Qt Designer로 UI 제작 및 불러오기, QtDesigner, uic.loadUiType, setupUi()
+- 03_21.py : Qt Designer로 생성한 widget의 이벤트 처리, 객체 탐색기 object name 확인하는 방법
+- 03_22.py : 시세 조회기의 조회 버튼 이벤트 처리: inquiry 메서드 연결
+- 03_23.py : 시세 조회기의 inquiry 메서드 수정 1 : 현재 가격을 console에 출력
+- 03_24.py : 시제 조회기의 inquiry 메서드 수정 2 : 현재 가격 QLineEdit 위젯에 출력, QLineEdit.setText()
+- 03_25.py : statusBar에 현재 시간을 1초 간격으로 출력하는 프로그램, QTimer.start(interval), QTimer.timeout.connect(method)
+- 03_26.py : lineEdit에 현재 가격을 1초 간력으로 출력하는 프로그램 (시세 조회기)
+
+
+# PyQt 시그널 슬롯(https://wikidocs.net/21876)
+- 03_27.py : pyqtSignal, pyqtSignal.emit(), slot을 직접 정의한 signal에 연결
+- 03_28.py : pyqtSignal.emit(int, int), 사용자 정의 signal로 데이터 보내기
 
 
 
@@ -33,12 +37,15 @@
    - https://wikidocs.net/21873
    - https://wikidocs.net/21874
    - https://wikidocs.net/21875
+   - https://wikidocs.net/21876
 
 
 # 참고할 자료
-   - MS Window10 계산기
    - https://github.com/pyqt/examples
-   - https://wikidocs.net/21876
+   - https://opentutorials.org/module/544/4998
+   - https://www.riverbankcomputing.com/static/Docs/PyQt5/
+   - https://www.pythonguis.com/pyqt5-tutorial/
+
 
 
 
@@ -52,7 +59,7 @@
 # draft
    - Class Name : Calculator
    - Member Variables :
-       - n-Operators? : int = 0.0
+       - n-Operators? : int = 0
        - ???
    - Methods :
        - add
