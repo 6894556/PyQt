@@ -1,10 +1,11 @@
-# # qt designer 3
-# qtDesigner로 만든 ui파일을 불러와서 버튼에 clicked 이벤트를 처리하는 메서드 inquiry 연결
+# # qt designer 5
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+import pykorbit
 
+# 조회버튼 클릭하면 QLineEdit 위젯에 출력
 
-form_class = uic.loadUiType("window_03_22.ui")[0]
+form_class = uic.loadUiType("window_03_24.ui")[0]
 
 
 class MyWindow(QMainWindow, form_class):
@@ -14,7 +15,8 @@ class MyWindow(QMainWindow, form_class):
         self.pushButton.clicked.connect(self.inquiry)
 
     def inquiry(self):
-        print("조회 버튼 클릭")
+        price = pykorbit.get_current_price("BTC")
+        self.lineEdit.setText(str(price))
 
 app = QApplication([])
 window = MyWindow()
