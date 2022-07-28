@@ -3,8 +3,6 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 import pykorbit
 
-# 조회버튼 클릭하면 QLineEdit 위젯에 출력
-
 form_class = uic.loadUiType("window_03_24.ui")[0]
 
 

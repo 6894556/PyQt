@@ -1,5 +1,5 @@
 # # qt designer 3
-# qtDesigner로 만든 ui파일을 불러와서 버튼에 clicked 이벤트를 처리하는 메서드 inquiry 연결
+
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
