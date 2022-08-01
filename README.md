@@ -1,5 +1,7 @@
 # 목표 : GUI 계산기 구현 by PyQt
 
+![KakaoTalk_20220801_225951058](https://user-images.githubusercontent.com/96480127/182178474-b89c6cbd-8a4b-4734-889a-40632a25abd1.jpg)
+
 # PyQt
     Python GUI(Graphical User Interface) 모듈
     TUI(Text-based User Interface) 모듈이 아니다.
