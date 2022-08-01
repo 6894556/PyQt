@@ -1,6 +1,8 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+from PyQt5.QtWidgets import (QApplication, QWidget, QDesktopWidget, QVBoxLayout, QGridLayout,
+                             QLineEdit, QPushButton)
 from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtGui import QIcon
 
 class MyApp(QWidget):
     def __init__(self):
@@ -8,33 +10,57 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        btn_00 = QPushButton("(", self)
-        btn_01 = QPushButton(")", self)
-        btn_02 = QPushButton("%", self)
-        btn_03 = QPushButton("AC", self)
-        btn_10 = QPushButton("7", self)
-        btn_11 = QPushButton("8", self)
-        btn_12 = QPushButton("9", self)
-        btn_13 = QPushButton("/", self)
-        btn_20 = QPushButton("4", self)
-        btn_21 = QPushButton("5", self)
-        btn_22 = QPushButton("6", self)
-        btn_23 = QPushButton("x", self)
-        btn_30 = QPushButton("1", self)
-        btn_31 = QPushButton("2", self)
-        btn_32 = QPushButton("3", self)
-        btn_33 = QPushButton("-", self)
-        btn_40 = QPushButton("0", self)
-        btn_41 = QPushButton(".", self)
-        btn_42 = QPushButton("=", self)
-        btn_43 = QPushButton("+", self)
+        grid = QGridLayout()
+        self.setLayout(grid)
 
+        ''' QLineEdit을 add 하지 못함
+        vbox = QVBoxLayout()
+        vbox.addStretch(3)
+
+        vbox.addWidget(QLineEdit.setText('calculation result'))
+        vbox.addLayout(grid)
+        self.setLayout(vbox)
+        '''
+
+        # grid.addWidget(QLineEdit.setText('calculation result'), 0, 0)
+        grid.addWidget(QPushButton('('), 1, 0)
+        grid.addWidget(QPushButton(')'), 1, 1)
+        grid.addWidget(QPushButton('%'), 1, 2)
+        grid.addWidget(QPushButton('AC'), 1, 3)
+        grid.addWidget(QPushButton('7'), 2, 0)
+        grid.addWidget(QPushButton('8'), 2, 1)
+        grid.addWidget(QPushButton('9'), 2, 2)
+        grid.addWidget(QPushButton('/'), 2, 3)
+        grid.addWidget(QPushButton("4"), 3, 0)
+        grid.addWidget(QPushButton("5"), 3, 1)
+        grid.addWidget(QPushButton("6"), 3, 2)
+        grid.addWidget(QPushButton("x"), 3, 3)
+        grid.addWidget(QPushButton("1"), 4, 0)
+        grid.addWidget(QPushButton("2"), 4, 1)
+        grid.addWidget(QPushButton("3"), 4, 2)
+        grid.addWidget(QPushButton("-"), 4, 3)
+        grid.addWidget(QPushButton("0"), 5, 0)
+        grid.addWidget(QPushButton("."), 5, 1)
+        grid.addWidget(QPushButton("="), 5, 2)
+        grid.addWidget(QPushButton("+"), 5, 3)
+
+        self.resize(200, 500)
         self.setWindowTitle("GUI Calculator")
-        self.move(300, 300)
-        self.resize(400, 200)
+        self.setWindowIcon(QIcon('calculator.png'))
+        self.center()
         self.show()
+
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyApp()
     sys.exit(app.exec_())
+
+
+# QLineEdit : https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qlineedit.html
+#

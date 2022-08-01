@@ -9,7 +9,7 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle('Centring')
+        self.setWindowTitle('Centering')
         self.resize(500, 350)
         self.center()
         self.show()

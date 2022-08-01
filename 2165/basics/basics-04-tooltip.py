@@ -26,3 +26,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyApp()
     sys.exit(app.exec_())
+
+# 툴팁 : 위젯의 도움말
+
+# QToolTip : https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qtooltip.html
