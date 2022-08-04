@@ -63,4 +63,6 @@ if __name__ == '__main__':
 
 
 # QLineEdit : https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qlineedit.html
-#
+# modules of PyQt5 : https://www.riverbankcomputing.com/static/Docs/PyQt5/module_index.html#ref-module-index
+# QtWidgets : https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qtwidgets-module.html
+# QLCDNumer : https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qlcdnumber.html?highlight=qlcdnumber#QLCDNumber
