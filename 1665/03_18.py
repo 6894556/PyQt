@@ -7,7 +7,7 @@ from PyQt5.QtGui import *
 class MyWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setGeometry(0,0, 300, 300)
+        self.setGeometry(300, 300, 300, 300)
         self.setWindowTitle("PyQt")
         self.setWindowIcon(QIcon("saturn.png"))
 

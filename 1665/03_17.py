@@ -6,10 +6,10 @@ from PyQt5.QtGui import *
 class MyWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setGeometry(0,0, 300, 300)
+        self.setGeometry(300, 300, 300, 300)
         self.setWindowTitle("PyQt")
         self.setWindowIcon(QIcon("saturn.png"))
-        # self라는 변수가 window를 바인딩하고 있으므로 self를 넘겨준다?
+        # self라는 변수가 window를 바인딩하고 있으므로 self를 넘겨준다
         btn = QPushButton("버튼1", self)
 
 

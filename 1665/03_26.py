@@ -1,6 +1,7 @@
 # # qt designer 7
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 from PyQt5 import uic
 import pykorbit
 # 비트코인 현재가를 statusBar에 자동으로 1초마다 갱신해서 출력하는 프로그램
@@ -11,8 +12,9 @@ class MyWindow(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setGeometry(100, 100, 500, 500)
-
+        self.setGeometry(300, 300, 300, 200)
+        self.setWindowTitle("Real Time BTC Price")
+        self.setWindowIcon(QIcon("coin.jpg"))
         self.timer = QTimer(self)
         self.timer.start(1000)
         self.timer.timeout.connect(self.inquiry)
